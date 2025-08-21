@@ -155,7 +155,7 @@ function Dashboard() {
         )}
 
         {!loading && !error && paginated.length > 0 && (
-          <ul className="space-y-2 sm:space-y-3">
+          <ul className="space-y-2 sm:space-y-3 max-w-full">
             {paginated.map((file) => (
               <FileCard
                 key={file.id}

@@ -2,8 +2,8 @@ import React from "react";
 
 function FileDetailModal({ file, role, name, content, setName, setContent, canWrite, canDelete, onClose, onSave, onDelete, saving, error, children }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-2xl p-4 sm:p-6 mx-4">
+    <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/50 overflow-y-auto">
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-2xl p-4 sm:p-6 mx-4 my-6 max-h-[85vh] overflow-y-auto">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">File Details</h2>
           <button className="text-gray-500 hover:text-gray-700 dark:text-gray-300 dark:hover:text-gray-200" onClick={onClose} aria-label="Close">✕</button>

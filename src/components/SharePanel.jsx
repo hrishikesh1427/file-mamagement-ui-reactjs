@@ -8,7 +8,7 @@ function SharePanel({ file, onChange }) {
   const [err, setErr] = useState(null);
 
   return (
-    <div className="mt-8 border-t pt-4">
+    <div className="mt-8 border-t pt-4 overflow-hidden">
       <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 mb-2">Sharing</h3>
       {err && <div className="mb-2 text-red-600 text-sm">{err}</div>}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,7 +43,7 @@ function SharePanel({ file, onChange }) {
               Add
             </button>
           </div>
-          <ul className="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+          <ul className="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1 break-words">
             {file.editors?.map((u) => (
               <li key={`e-${u.id}`} className="flex items-center justify-between">
                 <span>{u.username}</span>
@@ -99,7 +99,7 @@ function SharePanel({ file, onChange }) {
               Add
             </button>
           </div>
-          <ul className="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+          <ul className="mt-2 text-sm text-gray-700 dark:text-gray-300 space-y-1 break-words">
             {file.viewers?.map((u) => (
               <li key={`v-${u.id}`} className="flex items-center justify-between">
                 <span>{u.username}</span>
